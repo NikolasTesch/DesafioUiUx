@@ -28,7 +28,7 @@ a:visited {
   --bg-color1: #d7d9ce;
   --bg-color2: #0c7489;
   --bg-color3: #040404;
-  --destac-color: #119da4;
+  --destac-color: #119DA4;
 }
 
 /* Aplica o Tema Claro quando o checkbox está marcado */
@@ -54,6 +54,7 @@ a:visited {
   padding: 15px 30px;
   color: #d7d9ce;
   background-color: #0c7489;
+  box-shadow: #040404a1 0px 4px 6px -1px;
   z-index: 1000; /* Garante que fique acima do conteúdo */
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
 }
@@ -70,7 +71,7 @@ a:visited {
 }
 
 .logo-outline {
-  color: #00000000;
+  color: #0c7489;
   -webkit-text-stroke: 1px #d7d9ce;
   margin: 0 -2px; /* Ajuste espaçamento */
 }
@@ -99,7 +100,7 @@ a:visited {
   color: #d7d9ce;
   font-family: "BUNGEE";
   letter-spacing: 1px;
-  font-size: 10px;
+  font-size: 1rem;
   transition: ease-in-out 0.3s;
 }
 
@@ -132,6 +133,8 @@ a:visited {
 #theme-toggle:checked ~ #page-container .icon-display::before {
   content: "☀️";
 }
+
+/* ------------------------------------------ */
 
 /* Altera as Variáveis de Cor da Página */
 #theme-toggle:checked ~ #page-container {
@@ -207,14 +210,113 @@ a:visited {
 }
 
 /* ==================================== */
-/*          (PARA TESTE DE SCROLL)      */
+/*              SEÇÃO SERVIÇOS          */
 /* ==================================== */
 
-.content-section {
-  padding: 100px 30px;
-  min-height: 100vh; /* Para garantir o scroll */
-  font-size: 2rem;
+#servicos {
+  /* Padding para dar espaço ao header fixo */
+  background-color: #0c7489;
+  min-height: 100vh;
+  display: flex;
+   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+
+  
+}
+
+/* Título da Seção (SERVIÇOS) */
+.section-title {
+  font-family: 'BUNGEE';
+  font-size: 50px;
+  color: #d7d9ce;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+    align-self: flex-start;
+    letter-spacing: 2px;
+    padding: 7rem;
+    margin-bottom: auto;
+    
+}
+.section-title-outline-blue{
+  color: #0c7489;
+  -webkit-text-stroke: 1px #d7d9ce;
+  margin: 0 -2px; /* Ajuste espaçamento */
+}
+
+/* Contêiner dos Cards */
+.services-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: auto;
+    flex-wrap: wrap; /* Para garantir que funcione bem em telas menores */
+    position: relative
+}
+
+/* Estilo do Card Individual */
+.service-card {
+
+    background-color:#d7d9ce;
+    padding: 2rem; 
+    position: relative;
+    width: 20rem;
+    gap: 2rem;
+    border: 3px solid #119DA4;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+
+}/* Título do Card (UI/UX, WEB DEVELOPER, DESIGN GRÁFICO) */
+.card-title {
+    font-family: "BUNGEE";
+    font-size: 2.4rem;
+    color:#0c7489;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+.logo-outline-white{
+  color: #d7d9ce;
+  -webkit-text-stroke: 0.41px #0c7489;
+  margin: 0 -2px; /* Ajuste espaçamento */
+}
+
+.card-description {
+  color: #0c7489;
+  font-family: goldman;
+  font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    margin-top: 1rem;
+}
+
+.service-card:hover {
+    z-index: 10; /* Faz o card ficar na frente dos outros ao expandir */
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+}
+
+.service-card:hover .card-description {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ----------------------------------------------- */
+
+
+/* Seletor para o Modo Claro na Seção de Serviços */
+#theme-toggle:checked ~ #page-container .services-section {
+    background-color: #a8d5e5; /* Cor de fundo diferente para o modo claro */
+}
+
+#theme-toggle:checked ~ #page-container .service-card {
+    border: 3px solid var(--accent-color); /* Mantém a borda do accent-color atualizado */
 }
 
 /* ==================================== */
