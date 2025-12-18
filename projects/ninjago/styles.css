@@ -1,7 +1,7 @@
 * {
-  margin: auto;
+  margin: 0;
   padding: 0;
-  max-width: 1200px;
+  box-sizing: border-box;
 }
 
 body {
@@ -207,4 +207,112 @@ footer {
   color: white;
   text-align: center;
   padding: 40px;
+}
+/* --- AJUSTES PARA TELAS GRANDES (2K ou +) --- */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1800px; 
+  }
+
+  .banner-text h1, .logo {
+    max-width: 90%; 
+  }
+
+  .banner-text p {
+    font-size: 1.5rem; 
+    max-width: 600px;
+  }
+
+  .card {
+    flex: 1 1 18%; 
+    padding: 40px;
+  }
+
+  .card-title {
+    font-size: 32px; 
+  }
+
+  .card-text {
+    font-size: 18px; 
+  }
+
+  .ninjas {
+    height: 600px; 
+  }
+}
+/* --- DISPOSITIVOS PEQUENOS (Celulares) --- */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; 
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .banner-text {
+    order: 2; 
+  }
+
+  .banner-image {
+    order: 1;
+    width: 100%;
+    height: 200px;/
+  }
+
+  .logo {
+    max-width: 90%; 
+  }
+
+  .services-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .service {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .service:last-child {
+    border-bottom: none;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  
+  .ninjas {
+    height: 150px; 
+    gap: 5px;
+  }
+
+  .ninjas img {
+    width: 15%; 
+  }
+
+  .ninjas img:hover {
+    width: 40%; 
+  }
+
+  .bottom-card {
+    height: auto;
+    padding: 20px;
+  }
+
+  .bottom-title {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }

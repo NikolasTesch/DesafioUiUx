@@ -1,124 +1,219 @@
 /* RESET BÁSICO */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
   background-color: #000000;
-  color: #df9824;
+  color: #ffffff;
 }
 
 /* CABEÇALHO */
 header {
-  background: #df9824;
-  color: white;
-  padding: 20px;
+  background: #1a1a1a;
+  border-bottom: 2px solid #df9824;
+  padding: 15px 0;
+  text-align: center;
+}
+.container-header {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 24px;
+  color: #df9824;
   display: inline-block;
+  vertical-align: middle;
+  margin-right: 50px;
 }
 
 nav {
   display: inline-block;
-  margin-left: 40px;
+  vertical-align: middle;
 }
 
 nav a {
-  color: white;
-  margin-right: 20px;
+  color: #ffffff;
+  margin: 0 15px;
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.user-menu {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 50px;
 }
 
 .botao {
-  float: right;
-  background: white;
-  color: #df9824;
-  padding: 5px 10px;
+  background: #df9824;
+  color: #000000;
+  padding: 8px 18px;
   text-decoration: none;
-  border-radius: 20px;
-  margin: 2px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 /* BANNER */
 .banner {
   position: relative;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .banner img {
   width: 100%;
-  height: 400px;
-
+  min-height: 100%;
 }
 
 .texto-banner {
   position: absolute;
-  top: 100px;
-  left: 50px;
-  color: white;
-  max-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centralização real */
+  width: 80%;
+}
+
+.texto-banner h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.botao-banner {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  border: 2px solid #df9824;
+  color: #df9824;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* CATEGORIAS */
 .categorias {
-  padding: 40px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.titulo-secao h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.linha-detalhe {
+  width: 60px;
+  height: 3px;
+  background: #df9824;
+  margin: 0 auto 40px;
+}
+
+.card-container {
+  width: 95%;
+  margin: 0 auto;
 }
 
 .card {
-  background: #df9824;
-  width: 25%;
-
+  background: #1a1a1a;
+  width: 28%;
+  margin: 1%;
   display: inline-block;
-  margin: 2%;
-  vertical-align: bottom;
-  text-align: center;
-  color: #ffffff;
+  vertical-align: top;
+  border-bottom: 4px solid #df9824;
+  transition: transform 0.3s;
 }
 
 .card img {
   width: 100%;
+  display: block;
+  }
+
+.card-info {
+  padding: 20px;
 }
 
-/* PROMOÇÂO */
+.card h3 {
+  color: #df9824;
+  margin-top: 0;
+}
+
+/* PROMOÇÃO */
 .promo {
   background: #df9824;
-  color: white;
-  padding: 40px;
-  margin-left: 20px;
+  color: #000000;
+  padding: 60px 0;
+  text-align: center;
 }
 
-.promo-texto {
-  width: 50%;
-  margin: 10px;
+.promo-content h2 {
+  font-size: 32px;
+  margin: 0;
 }
 
-.promo-texto button {
-  padding: 10px;
-  background: white;
+.form-promo {
+  margin-top: 25px;
+}
+
+.form-promo input {
+  padding: 12px;
+  width: 300px;
   border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.form-promo button {
+  padding: 12px 25px;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* ARTIGO */
 .artigo {
-  padding: 40px;
+  padding: 80px 0;
+  text-align: center;
 }
 
-.artigo img {
+.artigo-box {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left; 
+}
+
+.artigo-img {
   width: 10%;
   display: inline-block;
+  vertical-align: middle;
 }
 
 .artigo-texto {
-  width: 45%;
+  width: 50%;
   display: inline-block;
-  vertical-align: top;
-  padding: 20px;
+  vertical-align: middle;
+  padding-left: 5%;
+}
+
+.tag {
+  color: #df9824;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 /* RODAPÉ */
 footer {
-  background: #df9824;
-  color: white;
+  background: #000000;
+  color: #ffffff;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
 }
