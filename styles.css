@@ -11,8 +11,7 @@
 
 a {
   text-decoration: none; /* Remove o sublinhado */
-  color: inherit; /* Faz o link usar a cor que você definiu no texto, não o roxo padrão */
-  outline: none; /* Remove aquela borda que aparece ao clicar */
+  color: inherit; /* Faz o link usar a cor que você definiu no texto*/
 }
 
 a:visited {
@@ -109,7 +108,7 @@ a:visited {
 }
 
 /* ==================================== */
-/* BOTÃO DDE TEMA */
+/* BOTÃO DE TEMA */
 
 .theme-toggle-button {
   border: solid 2px #d7d9ce;
@@ -134,29 +133,14 @@ a:visited {
   content: "☀️";
 }
 
-/* ------------------------------------------ */
 
-/* Altera as Variáveis de Cor da Página */
-#theme-toggle:checked ~ #page-container {
-  --background-color: #d7d9ce;
-  --text-color: #1a1a1a;
-  --accent-color: #0c7489; /* Tom mais escuro para contraste no claro */
-  --subtitle-color: #555555;
-}
-
-/* Ajuste específico para os cards de serviço no modo claro */
-#theme-toggle:checked ~ #page-container .service-card {
-  background-color: #d7d9ce;
-  border-color: var(--accent-color);
-}
 
 /* ==================================== */
 /*          SEÇÃO INICIO/HERO           */
 /* ==================================== */
 
 .hero-section {
-  /* Padding para dar espaço ao header fixo */
-  background-color: #040404;
+  background-color: var(--bg-color3);
   padding-top: 100px;
   min-height: 100vh;
   display: flex;
@@ -164,6 +148,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 /* Título Principal "TESCH" */
@@ -182,9 +167,6 @@ a:visited {
   -webkit-text-stroke: 3px #0c7489;
 }
 
-/* .logo-outline-main:hover {
-    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5), 0 0 20px rgba(0, 188, 212, 0.3); /* Efeito neon */
-
 /* Subtítulo */
 .subtitle-main {
   font-family: "goldman";
@@ -201,7 +183,8 @@ a:visited {
   padding: 3px 10px;
   background-color: #0c7489;
   border-radius: 10px;
-  transition: ease-in-out 0.3s;
+  transition: background-color 0.3s ease;
+  
 }
 
 .start-button:hover {
@@ -209,12 +192,12 @@ a:visited {
   transform: translateY(-3px);
 }
 
+
 /* ==================================== */
 /*              SEÇÃO SERVIÇOS          */
 /* ==================================== */
 
 #servicos {
-  /* Padding para dar espaço ao header fixo */
   background-color: #0c7489;
   min-height: 100vh;
   display: flex;
@@ -223,7 +206,7 @@ a:visited {
   align-items: center;
   text-align: center;
 }
-/* Título da Seção (SERVIÇOS) */
+/* TITULO */
 .section-title {
   font-family: "BUNGEE";
   font-size: 50px;
@@ -232,7 +215,15 @@ a:visited {
   align-self: flex-start;
   letter-spacing: 2px;
   padding: 7rem;
-  margin-bottom: 0;
+}
+.section-titleB {
+  font-family: "BUNGEE";
+  font-size: 50px;
+  color: #0c7489;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  align-self: flex-start;
+  letter-spacing: 2px;
+  padding: 7rem;
 }
 .section-title-outline-blue {
   color: #0c7489;
@@ -245,7 +236,6 @@ a:visited {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  margin-bottom: auto;
   flex-wrap: wrap; /* Para garantir que funcione bem em telas menores */
   position: relative;
 }
@@ -262,7 +252,8 @@ a:visited {
   cursor: pointer;
   border-radius: 10px;
   transition: 0.3s ease-in-out;
-} /* Título do Card (UI/UX, WEB DEVELOPER, DESIGN GRÁFICO) */
+} 
+
 .card-title {
   font-family: "BUNGEE";
   font-size: 2.4rem;
@@ -300,27 +291,21 @@ a:visited {
   visibility: visible;
 }
 
-/* ----------------------------------------------- */
 
-/* Seletor para o Modo Claro na Seção de Serviços */
-/* #theme-toggle:checked ~ #page-container .services-section { */
-/* background-color: #a8d5e5; Cor de fundo diferente para o modo claro */
 
-/* #theme-toggle:checked ~ #page-container .service-card { */
-/* border: 3px solid var(--accent-color);  Mantém a borda do accent-color atualizado */
 
 /* ==================================== */
 /*            SEÇÃO PORTFOLIO           */
 /* ==================================== */
 #portfolio {
-  /* Padding para dar espaço ao header fixo */
-  background-color: #040404;
+  background-color: var(--bg-color3);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 /* TITULO */
 .portfolio-title {
@@ -329,21 +314,18 @@ a:visited {
   color: #0c7489;
   letter-spacing: 2px;
   align-self: flex-start;
-  padding-top: 7rem;
-  padding-left: 7rem;
-  margin-bottom: 40px;
+  padding: 7rem;
 }
 
 /* Container dos Cards */
 .portfolio-container {
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Para garantir que funcione bem em telas menores */
+  position: relative;
+ 
+} 
 
 /* Estilo do Card Link */
 .portfolio-card {
@@ -371,9 +353,8 @@ a:visited {
 
 /* Cores específicas de fundo dos cards (baseado na imagem) */
 .shelter-bg {
-    background-color: #f0b429; /* Amarelo/Laranja do Shelter */
+    background-color: #DF9824; /* Amarelo/Laranja do Shelter */
 }
-
 .ninjago-bg {
     background-color: #4a0000; /* Fundo escuro para o Ninjago */
 }
@@ -413,10 +394,7 @@ a:visited {
     opacity: 0.7;
     font-style: italic;
 }
-/* Ajuste para o Modo Claro nesta seção */
-#theme-toggle:checked ~ #page-container .portfolio-section {
-    background-color: #d7d9ce;
-}
+
 /* ==================================== */
 /*              SEÇÃO SOBRE             */
 /* ==================================== */
@@ -512,25 +490,17 @@ a:visited {
     object-fit: contain;
   }
 
-  /* Estilo para o Modo Claro na Seção SOBRE */
-  /* #theme-toggle:checked ~ #page-container .about-section { */
-    /* background-color: #a8d5e5; Cor de fundo do modo claro */
-  
-
-  /* #theme-toggle:checked ~ #page-container .skills-title {
-    color: var(--background-color); Texto escuro */
-    /* text-shadow: none; */
-
 }
 /* ==================================== */
 /*              SEÇÃO CONTATO          */
 /* ==================================== */
 /* Section completa */
 #contato {
-  background-color: #040404;
+  background-color: var(--bg-color3);
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 /* Container geral */
@@ -657,6 +627,7 @@ a:visited {
   text-align: center;
   margin-bottom: 40px;
 }
+
 /* ==================================== */
 /*                FOOTER                */
 /* ==================================== */
@@ -674,3 +645,4 @@ a:visited {
   font-size: 12px;
   color: #d7d9ce;
 }
+
