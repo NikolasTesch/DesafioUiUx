@@ -118,7 +118,7 @@ a:visited {
   padding: 5px 5px;
   border-radius: 10px;
   transition: 0.3s;
-  z-index: 100; /* Garante que esteja acima de tudo para ser clicável */
+  z-index: 100; 
 }
 
 .theme-toggle-button:hover {
@@ -179,7 +179,6 @@ a:visited {
   -webkit-text-stroke: 3px #0c7489;
 }
 
-/* Subtítulo */
 .subtitle-main {
   font-family: "goldman";
   font-size: 22px;
@@ -204,18 +203,17 @@ a:visited {
 }
 /* MODO CLARO */
 #theme-toggle:checked ~ #page-container .logo-outline-main {
-  color: var(--bg-color3); /* O preenchimento do "ES" acompanha o fundo claro */
+  color: var(--bg-color3); 
   -webkit-text-stroke: 3px var(--bg-color2);
 }
 #theme-toggle:checked ~ #page-container .start-button {
-  color: var(--bg-color3); /* O preenchimento do "ES" acompanha o fundo claro */
+  color: var(--bg-color3); 
   -webkit-text-stroke: 3px var(--bg-color2);
 }
 
 #theme-toggle:checked ~ #page-container .subtitle-main {
-  color: var(--bg-color1); /* No modo claro, bg-color1 é #040404 (Preto) conforme seu root */
+  color: var(--bg-color1); 
 }
-
 /* ==================================== */
 /*              SEÇÃO SERVIÇOS          */
 /* ==================================== */
@@ -251,15 +249,14 @@ a:visited {
 .section-title-outline-blue {
   color: #0c7489;
   -webkit-text-stroke: 1px #d7d9ce;
-  margin: 0 -2px; /* Ajuste espaçamento */
+  margin: 0 -2px;
 }
 
-/* Contêiner dos Cards */
 .services-container {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap; /* Para garantir que funcione bem em telas menores */
+  flex-wrap: wrap; 
   position: relative;
 }
 
@@ -290,7 +287,7 @@ a:visited {
 .logo-outline-white {
   color: #d7d9ce;
   -webkit-text-stroke: 0.41px #0c7489;
-  margin: 0 -2px; /* Ajuste espaçamento */
+  margin: 0 -2px; 
 }
 
 .card-description {
@@ -304,7 +301,7 @@ a:visited {
 }
 
 .service-card:hover {
-  z-index: 10; /* Faz o card ficar na frente dos outros ao expandir */
+  z-index: 10;
   transform: scale(1.1);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -337,26 +334,23 @@ a:visited {
   padding: 7rem;
 }
 
-/* Container dos Cards */
 .portfolio-container {
   display: flex;
   gap: 2rem;
   justify-content: center;
-  flex-wrap: wrap; /* Para garantir que funcione bem em telas menores */
+  flex-wrap: wrap;
   position: relative;
 }
 
-/* Estilo do Card Link */
 .portfolio-card {
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s; 
   perspective: 1000px;
 }
 
-/* Moldura do Card */
 .card-frame {
   width: 320px;
   height: 180px;
@@ -370,7 +364,6 @@ a:visited {
   box-shadow: 0 0 15px rgba(12, 116, 137, 0.2);
 }
 
-/* Cores específicas de fundo dos cards (baseado na imagem) */
 .shelter-bg {
   background-color: #df9824; /* Amarelo/Laranja do Shelter */
 }
@@ -382,27 +375,25 @@ a:visited {
 .project-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajusta a imagem dentro do card */
+  object-fit: contain; 
 }
 
-/* Texto abaixo do card */
 .project-name {
   margin-top: 15px;
   font-family: "GOLDMAN", sans-serif;
   color: #0c7489;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
-/* EFEITO HOVER: Aumento de escala centralizado */
 .portfolio-card:hover {
-  transform: scale(1.15); /* Aumenta o tamanho */
-  z-index: 10; /* Garante que fique por cima dos outros */
+  transform: scale(1.1); 
+  z-index: 10; 
 }
 
 .portfolio-card:hover .card-frame {
-  box-shadow: 0 0 30px rgba(12, 116, 137, 0.6);
-  border-color: #d7d9ce; /* Muda a borda para a cor clara no hover */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--destac-color); 
 }
 
 /* Frase final */
@@ -410,8 +401,7 @@ a:visited {
   margin-top: 80px;
   font-family: "GOLDMAN", sans-serif;
   color: #0c7489;
-  font-size: 1.1rem;
-  opacity: 0.7;
+  font-size: 1rem;
   font-style: italic;
 }
 /* MODO CLARO*/
@@ -431,7 +421,6 @@ a:visited {
 /*              SEÇÃO SOBRE             */
 /* ==================================== */
 #sobre {
-  /* Padding para dar espaço ao header fixo */
   background-color: #0c7489;
   min-height: 100vh;
   display: flex;
@@ -487,14 +476,12 @@ a:visited {
     padding-left: 7rem;
   }
 
-  /* CONTEINER DAS SKILLS */
   .skills-container {
     display: flex;
     width: 70%;
     justify-content: space-between;
   }
 
-  /* Card Individual de Skill */
   .skill-card {
     width: 80px;
     height: 80px;
@@ -506,13 +493,10 @@ a:visited {
     align-items: center;
     cursor: pointer;
     transition: box-shadow 0.3s ease-out, transform 0.1s;
-
-    /* Configuração inicial para o ícone */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
   .skill-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-5px);
   }
 
@@ -525,7 +509,6 @@ a:visited {
 /* ==================================== */
 /*              SEÇÃO CONTATO          */
 /* ==================================== */
-/* Section completa */
 #contato {
   background-color: var(--bg-color3);
   display: flex;
@@ -534,14 +517,13 @@ a:visited {
   transition: background-color 0.3s ease;
 }
 
-/* Container geral */
 .contact-content {
   font-family: "BUNGEE";
   display: flex;
   gap: 20rem;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 70px; /* Espaço antes da frase de descrição */
+  margin-bottom: 70px; 
   width: 100%;
 }
 
@@ -641,7 +623,7 @@ a:visited {
 
 .social-link:last-child .social-icon {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.087-.744.084-.693.084-.693 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.304.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.766.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.564 21.792 24 17.292 24 12c0-6.627-5.373-12-12-12z"/></svg>');
-  width: 20px; /* Ajuste o tamanho do ícone SVG */
+  width: 20px; 
   height: 20px;
   display: inline-block;
   vertical-align: middle;
@@ -665,19 +647,17 @@ a:visited {
 }
 
 #theme-toggle:checked ~ #page-container .form-input {
-  background-color: #fff; /* Input branco para melhor contraste no fundo claro */
+  background-color: #fff; 
   border-color: var(--bg-color2);
 }
 
 #theme-toggle:checked ~ #page-container .project-description {
-  color: var(--bg-color1); /* Texto preto sobre fundo claro */
+  color: var(--bg-color1);
 }
 
 #theme-toggle:checked ~ #page-container .submit-button{
 color: var(--bg-color3);
 }
-
-
 
 /* ==================================== */
 /*                FOOTER                */
