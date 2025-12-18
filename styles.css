@@ -13,10 +13,6 @@ a {
   text-decoration: none; /* Remove o sublinhado */
 }
 
-a:visited {
-  color: inherit;
-}
-
 /* ==================================== */
 /* VARIÁVEIS DE TEMA E CORES BÁSICAS */
 /* ==================================== */
@@ -589,6 +585,10 @@ a:visited {
   align-self: flex-end;
   letter-spacing: 2px;
   margin-bottom: 15px;
+}
+
+#link{
+  color: #0c7489;
 }
 
 .social-links {
