@@ -589,7 +589,6 @@ a:visited {
   color: #0c7489;
   align-self: flex-end;
   letter-spacing: 2px;
-
   margin-bottom: 15px;
 }
 
@@ -604,13 +603,8 @@ a:visited {
   align-items: center;
   color: #0c7489;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
-  transition: color 0.3s;
-}
-
-.social-link:hover {
-  color: #0c7489;
 }
 
 .social-icon {
