@@ -189,7 +189,7 @@ a {
   padding: 3px 10px;
   background-color: #0c7489;
   border-radius: 10px;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .start-button:hover {
