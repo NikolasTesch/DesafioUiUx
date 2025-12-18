@@ -635,7 +635,7 @@ a:visited {
 
 /* TEMA CLARO */
 #theme-toggle:disabled~ #page-container .social-links,
-#theme-toggle:disabled~ #page-container .social-links{
+#theme-toggle:disabled~ #page-container .social-link{
    color: #0c7489;
 }
 
