@@ -634,7 +634,8 @@ a:visited {
 }
 
 /* TEMA CLARO */
-#theme-toggle:disabled~ #page-container .contact-title{
+#theme-toggle:disabled~ #page-container .social-links,
+#theme-toggle:disabled~ #page-container .social-links{
    color: #0c7489;
 }
 
