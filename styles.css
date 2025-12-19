@@ -315,7 +315,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Estilo do Card Individual */
 .service-card {
   background-color:  #d7d9ce;
   padding: 3rem 2rem;
@@ -417,7 +416,7 @@ body {
 
 .portfolio-card:hover .project-img, 
 .portfolio-card:hover .project-logo {
-  transform: scale(1.15); /* Zoom na imagem */
+  transform: scale(1.15); 
 }
 
 .portfolio-card:hover .card-frame {
@@ -618,10 +617,6 @@ body {
 }
 
 /* ==================================== */
-/*            RESPONSIVIDADE            */
-/* ==================================== */
-
-/* ==================================== */
 /* ANIMAÇÕES DE SCROLL (VIEW TIMELINE) */
 /* ==================================== */
 @keyframes reveal {
@@ -633,4 +628,227 @@ body {
   animation: reveal linear both;
   animation-timeline: view();
   animation-range: entry 10% cover 30%;
+}
+/* ==================================== */
+/* RESPONSIVIDADE             */
+/* ==================================== */
+
+/* --- NOTEBOOK / DESKTOP PEQUENO (Até 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding-side: 4vw;
+    --section-padding-top: 6rem;
+  }
+
+  .main-logo {
+    font-size: 7rem;
+  }
+
+  .header-nav {
+    gap: 3rem; 
+  }
+
+  .section-titleB, 
+  .section-titleN {
+    font-size: 3rem;
+  }
+  
+  .skills-grid-2col {
+    gap: 1rem;
+  }
+}
+
+/* --- TABLETS (Até 768px) --- */
+@media (max-width: 768px) {
+  .header-fixed {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    position: relative; 
+  }
+
+  .header-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .main-logo {
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .subtitle-main {
+    font-size: 1.2rem;
+  }
+
+  .section-titleB, 
+  .section-titleN {
+    font-size: 2.5rem;
+    text-align: center; 
+  }
+
+  .service-card {
+    width: 90%; 
+  }
+
+  .about-split-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text-container {
+    border-left: none;
+    border-top: 5px solid #d7d9ce;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .skills-column {
+    align-items: center; 
+    margin-top: 2rem;
+  }
+
+  .skills-title {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-input {
+    max-width: 100%;
+  }
+}
+
+/* --- MOBILE (Até 480px) --- */
+@media (max-width: 480px) {
+  .header-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0.5rem;
+  }
+  
+  .nav-button {
+    font-size: 0.9rem;
+  }
+
+  /* Hero e Títulos */
+  .main-logo {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+
+  .section-titleB, 
+  .section-titleN {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Serviços */
+  .service-card {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  /* Skills */
+  .skills-grid-2col {
+    grid-template-columns: 1fr 1fr
+  }
+  
+  .skill-card {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* --- MOBILE PEQUENO (Até 370px) --- */
+@media (max-width: 370px) {
+  .main-logo {
+    font-size: 2.8rem;
+  }
+
+  .logo-small {
+    font-size: 20px;
+  }
+
+  .nav-button {
+    font-size: 0.8rem;
+  }
+  
+  .header-nav {
+    flex-direction: column; 
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .section-titleB, 
+  .section-titleN {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==================================== */
+/* TELAS GRANDES (HI-DPI)      */
+/* ==================================== */
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  html {
+    font-size: 18px; 
+  }
+  
+  .container-align {
+    max-width: 1600px; 
+    margin: 0 auto;
+  }
+}
+
+/* --- 2K (2048px x 1080px) --- */
+@media (min-width: 1921px) and (max-width: 2500px) {
+  html {
+    font-size: 20px;
+  }
+
+  .main-logo {
+    font-size: 10rem;
+  }
+
+  .container-align {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
+/* --- 4K (3840px x 2160px) --- */
+@media (min-width: 2501px) {
+  html {
+    font-size: 24px;
+  }
+
+  :root {
+    --section-padding-side: 15vw; 
+  }
+
+  .main-logo {
+    font-size: 14rem;
+  }
+
+  .service-card {
+    width: 25rem;
+  }
+  
+  .portfolio-card {
+    max-width: 600px;
+  }
+  
+  .header-nav {
+    gap: 10rem;
+  }
 }
