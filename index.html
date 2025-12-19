@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- --------------------------------------------- -->
-    <!--                   HEADER                      -->
-    <!-- --------------------------------------------- -->
     <input type="checkbox" id="theme-toggle" hidden />
+    
     <div id="page-container">
-      <header class="header-fixed">
-        <div>
+      
+      <header class="header-fixed glass-effect">
+        <div class="logo-container">
           <a href="#inicio">
-            <span class="logo-small"
-              >TE<span class="logo-outline">S</span><span>CH</span></span
-            >
+            <span class="logo-small">TE<span class="logo-outline">S</span><span>CH</span></span>
             <span id="subtitle">PORTFOLIO</span>
           </a>
         </div>
@@ -29,186 +26,170 @@
           <a href="#contato" class="nav-button">CONTATO</a>
         </nav>
 
-        <div>
-          <label for="theme-toggle" class="theme-toggle-button"
-            ><span class="icon-display"></span>
+        <div class="theme-wrapper">
+          <label for="theme-toggle" class="theme-toggle-button">
+            <span class="icon-display"></span>
           </label>
         </div>
       </header>
 
-      <!-- --------------------------------------------- -->
-      <!--                  INICIO/HERO                   -->
-      <!-- --------------------------------------------- -->
-      <section id="inicio" class="hero-section">
-        <h1 class="main-logo">TE<span class="logo-outline-main">S</span>CH</h1>
-        <p class="subtitle-main">
-          Aspirante a Dev no Alpha Edtech em constante crescimento
+      <main>
+        
+        <section id="inicio" class="hero-section">
+          <div class="fade-in-scroll">
+            <h1 class="main-logo">TE<span class="logo-outline-main">S</span>CH</h1>
+            <p class="subtitle-main">
+              Aspirante a Dev no Alpha Edtech em constante crescimento
+            </p>
+            <a href="#servicos" class="start-button">START</a>
+          </div>
+        </section>
+
+        <section id="servicos" class="content-section">
+          <div class="container-align">
+            <h2 class="section-titleN reveal-text">
+              SER<span class="section-title-outline-blue">VI</span>ÇOS
+            </h2>
+
+            <div class="centered-content-wrapper">
+              <div class="services-container">
+                <div class="service-card reveal-card">
+                  <h3 class="card-title">
+                    UI<span class="logo-outline-white">/</span>UX
+                  </h3>
+                  <p class="card-description">
+                    Focado na melhor experiência possível para o usuário e acessibilidade.
+                  </p>
+                </div>
+
+                <div class="service-card reveal-card">
+                  <h3 class="card-title">
+                    <span class="logo-outline-white">WEB</span> DEV
+                  </h3>
+                  <p class="card-description">
+                    Seu site com novas funcionalidades e mecânicas exclusivas.
+                  </p>
+                </div>
+
+                <div class="service-card reveal-card">
+                  <h3 class="card-title">
+                    DESIGN <span class="logo-outline-white">GRÁFICO</span>
+                  </h3>
+                  <p class="card-description">
+                    Artes rápidas e cativantes para atrair clientes no primeiro olhar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" class="content-section">
+          <div class="container-align">
+            <h2 class="section-titleB title-breveal-text">PORTFOLIO</h2>
+
+            <div class="centered-content-wrapper">
+              <div class="portfolio-container">
+                <a href="./projects/shelter/index.html" class="portfolio-card reveal-card">
+                  <div class="card-frame shelter-bg">
+                    <img src="./assets/shelter.png" alt="Shelter Logo" class="project-logo" />
+                  </div>
+                  <p class="project-name">Shelter - Loja de Roupas</p>
+                </a>
+
+                <a href="./projects/ninjago/index.html" class="portfolio-card reveal-card">
+                  <div class="card-frame ninjago-bg">
+                    <img src="./assets/ninjagobannser.jpg" alt="Ninjago Wiki" class="project-img" />
+                  </div>
+                  <p class="project-name">Ninjago - Wiki</p>
+                </a>
+              </div>
+              <p class="coming-soon reveal-text">Mais projetos em desenvolvimento...</p>
+            </div>
+          </div>
+        </section>
+        
+        <section id="sobre" class="content-section">
+          <div class="container-align">
+            <h2 class="section-titleN reveal-text">SOBRE</h2>
+
+            <div class="about-split-layout">
+              
+              <div class="about-text-column reveal-card">
+                <div class="about-text-container">
+                  <p class="about-text">
+                    Desenvolvedor web em formação, com foco em HTML, CSS e JavaScript.
+                    Experiência na criação de interfaces responsivas e organizadas. 
+                    Sempre em busca de evolução e novos desafios na tecnologia.
+                  </p>
+                </div>
+              </div>
+
+              <div class="skills-column reveal-card">
+                <h3 class="skills-title">SKILLS</h3>
+                <div class="skills-grid-2col">
+                  <div class="skill-card"><img src="./assets/Giticon.png" alt="Git" class="skill-icon" /></div>
+                  <div class="skill-card"><img src="./assets/GitHubIcon.png" alt="GitHub" class="skill-icon" /></div>
+                  <div class="skill-card"><img src="./assets/Figmaicon.png" alt="Figma" class="skill-icon" /></div>
+                  <div class="skill-card"><img src="./assets/htmlicon.png" alt="HTML5" class="skill-icon" /></div>
+                  <div class="skill-card"><img src="./assets/cssicon.png" alt="CSS3" class="skill-icon" /></div>
+                  <div class="skill-card"><img src="./assets/jsicon.webp" alt="JS" class="skill-icon" /></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" class="content-section">
+          <div class="container-align">
+            <h2 class="section-titleB title-b reveal-text">CONTATE-ME</h2>
+            
+            <div class="contact-content">
+              <div class="contact-form-container reveal-card">
+                <form action="mailto:nikolasdtesch@gmail.com" method="POST" enctype="text/plain" class="contact-form">
+                  <label for="email" class="form-label">Seu EMAIL:</label>
+                  <input type="email" id="email" name="email" class="form-input" required />
+                  
+                  <label for="name" class="form-label">Seu NOME:</label>
+                  <input type="text" id="name" name="name" class="form-input" required />
+                  
+                  <button type="submit" class="submit-button">ENVIAR EMAIL</button>
+                </form>
+              </div>
+
+              <div class="social-wrapper reveal-card">
+                <h2 class="social-title">CONTINUAR</h2>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/in/nikolastesch/" target="_blank" class="social-link">
+                    <span class="social-icon">in</span> LINKEDIN
+                  </a>
+                  <a href="https://github.com/NikolasTesch" target="_blank" class="social-link">
+                    <span class="social-icon-github"></span> GITHUB
+                  </a>
+                  <a href="https://wa.me/5500000000000" target="_blank" class="social-link">
+                    <span class="social-icon-whatsapp"></span> WHATSAPP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info reveal-text">
+              <p class="project-description">
+                Projeto desenvolvido para o Alpha Edtech: Portfolio pessoal utilizando HTML, CSS, Git e Github.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p class="footer-text">
+          Copyright © 2025 Nikolas Dias Tesch - Todos os direitos reservados
         </p>
-        <a href="#servicos" class="start-button">START</a>
-      </section>
+      </footer>
 
-      <!-- --------------------------------------------- -->
-      <!--               SEÇÃO SERVIÇOS                  -->
-      <!-- --------------------------------------------- -->
-      <section id="servicos" class="content-section">
-        <h2 class="section-title">
-          SER<span class="section-title-outline-blue">VI</span>ÇOS
-        </h2>
-
-        <div class="services-container">
-          <div class="service-card">
-            <h3 class="card-title">
-              UI<span class="logo-outline-white">/</span>UX
-            </h3>
-            <p class="card-description">
-              Focado na melhor experiência possível para o usuário, sempre à
-              disposição para desenvolver a melhor e mais acessível experiência.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <h3 class="card-title">
-              <span class="logo-outline-white">WEB</span> DEVELOPER
-            </h3>
-            <p class="card-description">
-              Seu site como nunca antes, novas funcionalidades e mecânicas
-              exclusivas.
-            </p>
-          </div>
-
-          <div class="service-card">
-            <h3 class="card-title">
-              DESIGN <span class="logo-outline-white">GRÁFICO</span>
-            </h3>
-            <p class="card-description">
-              Artes rápidas e que atraem o cliente no primeiro olhar, cative e
-              atraia clientes com uma nova aparência.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- --------------------------------------------- -->
-      <!--               SEÇÃO PORTIFOLIO                  -->
-      <!-- --------------------------------------------- -->
-      <section id="portfolio" class="content-section">
-          <h2 class="section-titleB">PORTFOLIO</h2>
-
-        <div class="portfolio-container">
-          <a href="./projects/shelter/index.html" class="portfolio-card">
-            <div class="card-frame shelter-bg">
-              <img
-                src="./assets/shelter.png"
-                alt="Shelter Logo"
-                class="project-logo"
-              />
-            </div>
-            <p class="project-name">Shelter - Loja de Roupas</p>
-          </a>
-
-          <a href="./projects/ninjago/index.html" class="portfolio-card">
-            <div class="card-frame ninjago-bg">
-              <img
-                src="./assets/ninjagobannser.jpg"
-                alt="Ninjago Wiki"
-                class="project-img"
-              />
-            </div>
-            <p class="project-name">Ninjago - wiki</p>
-          </a>
-        </div>
-        <p class="coming-soon">Mais projetos em desenvolvimento...</p>
-      </section>
-      
-      <!-- --------------------------------------------- -->
-      <!--               SEÇÃO SOBRE                  -->
-      <!-- --------------------------------------------- -->
-      <section id="sobre" class="content-section">
-        <h2 class="section-title">SOBRE</h2>
-
-        <div class="about-text-container">
-          <p class="about-text">
-            Desenvolvedor web em formação, com foco em HTML, CSS e JavaScript.
-            Experiência na criação de interfaces responsivas e organizadas, com
-            base em design e lógica da programação. Sempre em busca de evolução
-            e novos desafios na área de tecnologia.
-          </p>
-        </div>
-
-        <h3 class="skills-title">SKILLS</h3>
-
-        <div class="skills-container">
-          <div class="skill-card">
-            <img src="./assets/Giticon.png" alt="Git" class="skill-icon" />
-          </div>
-
-          <div class="skill-card">
-            <img src="./assets/GitHubIcon.png" alt="GitHub" class="skill-icon" />
-          </div>
-
-          <div class="skill-card">
-            <img src="./assets/Figmaicon.png" alt="Figma/Design" class="skill-icon" />
-          </div>
-
-          <div class="skill-card">
-            <img src="./assets/htmlicon.png" alt="HTML5" class="skill-icon" />
-          </div>
-
-          <div class="skill-card">
-            <img src="./assets/cssicon.png" alt="CSS3" class="skill-icon" />
-          </div>
-
-          <div class="skill-card">
-            <img src="./assets/jsicon.webp" alt="JavaScript" class="skill-icon" />
-          </div>
-        </div>
-      </section>
-      <!-- --------------------------------------------- -->
-      <!--               SEÇÃO CONTATO                  -->
-      <!-- --------------------------------------------- -->
-      <section id="contato" class="content-section">
-        <h2 class="section-titleB">CONTATE-ME</h2>
-        <!--  -->
-        <div class="contact-content">
-          <div class="contact-form-container">
-            <form action="#" method="POST" class="contact-form">
-              <label for="email" class="form-label">Seu EMAIL:</label>
-              <input type="email" id="email" name="email" class="form-input" />
-              <label for="name" class="form-label">Seu NOME:</label>
-              <input type="text" id="name" name="name" class="form-input" />
-              <button type="submit" class="submit-button">ENVIAR</button>
-            </form>
-          </div>
-
-          <div>
-            <h2 class="social-title">CONTINUAR</h2>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/nikolastesch/" target="_blank" class="social-link" id="link">
-                <span class="social-icon">in</span> LINKEDIN
-              </a>
-              <a href="https://github.com/NikolasTesch" target="_blank" class="social-link" id="link">
-                <span class="social-icon"></span> GITHUB
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <p class="project-description">
-          Esse foi um projeto elaborado para um desafio da instituição Alpha
-          Edtech, o desenvolvimento de um portfolio pessoal para <br />
-          desenvolvimento web, fazendo nossa apresentação própria usando os
-          conhecimentos desenvolvidos até o momento em html, css, git <br />
-          e github.
-        </p>
-        <!-- --------------------------------------------- -->
-        <!--               FOOTER                  -->
-        <!-- --------------------------------------------- -->
-        <footer class="footer">
-          <p class="footer-text">
-            Copyright © 2025 Nikolas Dias Tesch - Todos os direitos reservados
-          </p>
-        </footer>
-      </section>
     </div>
   </body>
 </html>
